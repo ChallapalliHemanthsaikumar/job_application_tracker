@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+   
+  
+
+<!-- <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' data:gap: http://localhost:* 
+    https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js 'unsafe-eval';
+    style-src 'self' 'unsafe-inline';
+    media-src *;
+    script-src 'sha256-8ibMtuB66bWqavcF7hbuoFHzH54MXeSsLyo7AXY6f/o='
+  ">     -->
+   
+    
+
+   
+
+<script  type="module" src="firebase/firebase-app-compat.js"></script>
+<script  type="module" src="firebase/firebase-app.js"></script>
+<script type="module" src="firebase/firebase-firestore-compat.js"></script>
+<script type="module" src="firebase/firebase-firestore.js"></script>
+<!-- <script  type='module' src="firebase/firebase-ui-auth.js"></script> -->
+
+<script  type="module" src="firebase/firebase-auth.js"></script>
+
+<link rel="stylesheet" href="sidebar.css">
+<!-- <script  src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script> -->
+<script type="module" src="sidebar.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="sidebar.js" defer></script> --> 
+</head>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    .form-group button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+<body>
+   
+    <title>Job Application Tracker</title>
+    
+   
+    <div id="loginSection">
+      <h2>Login</h2>
+      <h3>Email:</h3>
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <h3>Password:</h3>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button id="loginButton">Login</button>
+
+      <h3> OR </h3>
+      <a id="registerButton" href='https://job-tracker-inky.vercel.app/' target="_blank">Register</a>
+  </div>
+    <div id="jobForm" style="display: none;">
+        
+        <h4>User Name: <span id="userName"></span></h4>
+
+        <h2>Job Application Tracker</h2>
+        <h6> Job Title:</h6>
+        <select id="jobTitle"></select>
+        <h6>Company Name:</h6>
+        <input type="text" id="companyName" placeholder="Company Name" required>
+        <h6>Company Type:</h6>
+        <select id="companyType">
+            <option value="IT staffing">IT staffing</option>
+            <option value="Company">Direct Company</option>
+        </select>
+        <h6>Job Type:</h6>
+        <select id="jobType">
+            <option value="full-time">Full-time</option>
+            <option value="contract">Contract</option>
+        </select>
+        <h6>apply Type:</h6>
+        <select id="applyType">
+            <option value="easy">Easy Apply</option>
+            <option value="link">Link Apply</option>
+        </select>
+        <h6>Comments:</h6>
+        <input type="text" id="comments" placeholder="Comments" required>
+        <button id="saveButton">Save</button>
+
+        <h6>
+          Check your Applications:
+        </h6>
+        <a id="registerButton" href='https://job-tracker-inky.vercel.app/' target="_blank">Tracker</a>
+        
+    </div>
+</body>
+</html>
+
